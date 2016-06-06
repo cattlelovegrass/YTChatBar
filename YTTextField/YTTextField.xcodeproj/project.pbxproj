@@ -56,6 +56,11 @@
 		827388161D01832900EAA698 /* XMChatFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 827388101D01832900EAA698 /* XMChatFaceView.m */; };
 		827388171D01832900EAA698 /* XMNFacePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 827388121D01832900EAA698 /* XMNFacePageView.m */; };
 		827388181D01832900EAA698 /* XMFaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 827388141D01832900EAA698 /* XMFaceManager.m */; };
+		827388401D0552CA00EAA698 /* chat_bar_more_highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8273883F1D0552CA00EAA698 /* chat_bar_more_highlight@3x.png */; };
+		827388421D0552CF00EAA698 /* chat_bar_more_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 827388411D0552CF00EAA698 /* chat_bar_more_normal@3x.png */; };
+		827388451D055F6700EAA698 /* YTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 827388441D055F6700EAA698 /* YTCollectionView.m */; };
+		827388471D05656F00EAA698 /* location_green_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 827388461D05656F00EAA698 /* location_green_icon@2x.png */; };
+		827388491D05658A00EAA698 /* show_user_location_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 827388481D05658A00EAA698 /* show_user_location_selected@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -149,6 +154,12 @@
 		827388121D01832900EAA698 /* XMNFacePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNFacePageView.m; sourceTree = "<group>"; };
 		827388131D01832900EAA698 /* XMFaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFaceManager.h; sourceTree = "<group>"; };
 		827388141D01832900EAA698 /* XMFaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFaceManager.m; sourceTree = "<group>"; };
+		8273883F1D0552CA00EAA698 /* chat_bar_more_highlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bar_more_highlight@3x.png"; sourceTree = "<group>"; };
+		827388411D0552CF00EAA698 /* chat_bar_more_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bar_more_normal@3x.png"; sourceTree = "<group>"; };
+		827388431D055F6700EAA698 /* YTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTCollectionView.h; sourceTree = "<group>"; };
+		827388441D055F6700EAA698 /* YTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTCollectionView.m; sourceTree = "<group>"; };
+		827388461D05656F00EAA698 /* location_green_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "location_green_icon@2x.png"; sourceTree = "<group>"; };
+		827388481D05658A00EAA698 /* show_user_location_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "show_user_location_selected@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,6 +306,10 @@
 		827387EA1D016F6500EAA698 /* 表情 */ = {
 			isa = PBXGroup;
 			children = (
+				827388411D0552CF00EAA698 /* chat_bar_more_normal@3x.png */,
+				8273883F1D0552CA00EAA698 /* chat_bar_more_highlight@3x.png */,
+				827388481D05658A00EAA698 /* show_user_location_selected@2x.png */,
+				827388461D05656F00EAA698 /* location_green_icon@2x.png */,
 				8273880B1D01830200EAA698 /* face.plist */,
 				8273880D1D01832900EAA698 /* SwipeView.h */,
 				8273880E1D01832900EAA698 /* SwipeView.m */,
@@ -313,6 +328,8 @@
 			children = (
 				827387DA1D015B6A00EAA698 /* YTMoreView.h */,
 				827387DB1D015B6A00EAA698 /* YTMoreView.m */,
+				827388431D055F6700EAA698 /* YTCollectionView.h */,
+				827388441D055F6700EAA698 /* YTCollectionView.m */,
 			);
 			name = "更多";
 			sourceTree = "<group>";
@@ -418,11 +435,15 @@
 				827387BC1D01555A00EAA698 /* picN@3x.png in Resources */,
 				827387B51D01555A00EAA698 /* emNot@2x.png in Resources */,
 				827387BB1D01555A00EAA698 /* picN@2x.png in Resources */,
+				827388421D0552CF00EAA698 /* chat_bar_more_normal@3x.png in Resources */,
 				827387B61D01555A00EAA698 /* emNot@3x.png in Resources */,
 				8273877C1D0154F400EAA698 /* Assets.xcassets in Resources */,
 				827387BA1D01555A00EAA698 /* picS@3x.png in Resources */,
+				827388401D0552CA00EAA698 /* chat_bar_more_highlight@3x.png in Resources */,
 				8273877A1D0154F400EAA698 /* Main.storyboard in Resources */,
 				827387B71D01555A00EAA698 /* picS@2x.png in Resources */,
+				827388491D05658A00EAA698 /* show_user_location_selected@2x.png in Resources */,
+				827388471D05656F00EAA698 /* location_green_icon@2x.png in Resources */,
 				827387B91D01555A00EAA698 /* emo@3x.png in Resources */,
 				827388041D017F1300EAA698 /* TZImagePickerController.bundle in Resources */,
 			);
@@ -444,6 +465,7 @@
 				827387E31D015C5E00EAA698 /* YTImageSlideView.m in Sources */,
 				827388031D017F1300EAA698 /* TZImageManager.m in Sources */,
 				827387A91D01554C00EAA698 /* NSArray+MASAdditions.m in Sources */,
+				827388451D055F6700EAA698 /* YTCollectionView.m in Sources */,
 				827387CA1D01584600EAA698 /* YTToolBar.m in Sources */,
 				827388171D01832900EAA698 /* XMNFacePageView.m in Sources */,
 				827387C71D01562700EAA698 /* HPTextViewInternal.m in Sources */,
@@ -622,6 +644,7 @@
 				827387851D0154F400EAA698 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
