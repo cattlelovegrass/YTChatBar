@@ -55,6 +55,11 @@
 		82C5E2D21D06538B00159B4C /* XMNFacePageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5E2CC1D06538B00159B4C /* XMNFacePageView.m */; };
 		82C5E2D31D06538B00159B4C /* XMFaceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5E2CE1D06538B00159B4C /* XMFaceManager.m */; };
 		82C5E2D61D0654A400159B4C /* YTSlideImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5E2D51D0654A400159B4C /* YTSlideImageView.m */; };
+		82C5E2D81D065DDE00159B4C /* chat_bar_more_highlight@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C5E2D71D065DDE00159B4C /* chat_bar_more_highlight@3x.png */; };
+		82C5E2DA1D065DE500159B4C /* chat_bar_more_normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82C5E2D91D065DE500159B4C /* chat_bar_more_normal@3x.png */; };
+		82C5E2E01D065E8300159B4C /* YTMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5E2DF1D065E8300159B4C /* YTMoreView.m */; };
+		82C5E2E31D06709300159B4C /* YTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5E2E21D06709300159B4C /* YTCollectionView.m */; };
+		82C5E2E61D06713800159B4C /* YTCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 82C5E2E51D06713800159B4C /* YTCollectionCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,17 +139,25 @@
 		82C5E2B91D05792900159B4C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		82C5E2BD1D057AF900159B4C /* YTImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTImageManager.h; sourceTree = "<group>"; };
 		82C5E2BE1D057AF900159B4C /* YTImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTImageManager.m; sourceTree = "<group>"; };
-		82C5E2C61D06538B00159B4C /* facem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = facem.plist; sourceTree = "<group>"; };
-		82C5E2C71D06538B00159B4C /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwipeView.h; sourceTree = "<group>"; };
-		82C5E2C81D06538B00159B4C /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwipeView.m; sourceTree = "<group>"; };
-		82C5E2C91D06538B00159B4C /* XMChatFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMChatFaceView.h; sourceTree = "<group>"; };
-		82C5E2CA1D06538B00159B4C /* XMChatFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMChatFaceView.m; sourceTree = "<group>"; };
-		82C5E2CB1D06538B00159B4C /* XMNFacePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMNFacePageView.h; sourceTree = "<group>"; };
-		82C5E2CC1D06538B00159B4C /* XMNFacePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMNFacePageView.m; sourceTree = "<group>"; };
-		82C5E2CD1D06538B00159B4C /* XMFaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMFaceManager.h; sourceTree = "<group>"; };
-		82C5E2CE1D06538B00159B4C /* XMFaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMFaceManager.m; sourceTree = "<group>"; };
+		82C5E2C61D06538B00159B4C /* facem.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = facem.plist; path = TZImagePickerController/facem.plist; sourceTree = "<group>"; };
+		82C5E2C71D06538B00159B4C /* SwipeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SwipeView.h; path = TZImagePickerController/SwipeView.h; sourceTree = "<group>"; };
+		82C5E2C81D06538B00159B4C /* SwipeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SwipeView.m; path = TZImagePickerController/SwipeView.m; sourceTree = "<group>"; };
+		82C5E2C91D06538B00159B4C /* XMChatFaceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMChatFaceView.h; path = TZImagePickerController/XMChatFaceView.h; sourceTree = "<group>"; };
+		82C5E2CA1D06538B00159B4C /* XMChatFaceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMChatFaceView.m; path = TZImagePickerController/XMChatFaceView.m; sourceTree = "<group>"; };
+		82C5E2CB1D06538B00159B4C /* XMNFacePageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMNFacePageView.h; path = TZImagePickerController/XMNFacePageView.h; sourceTree = "<group>"; };
+		82C5E2CC1D06538B00159B4C /* XMNFacePageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMNFacePageView.m; path = TZImagePickerController/XMNFacePageView.m; sourceTree = "<group>"; };
+		82C5E2CD1D06538B00159B4C /* XMFaceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XMFaceManager.h; path = TZImagePickerController/XMFaceManager.h; sourceTree = "<group>"; };
+		82C5E2CE1D06538B00159B4C /* XMFaceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XMFaceManager.m; path = TZImagePickerController/XMFaceManager.m; sourceTree = "<group>"; };
 		82C5E2D41D0654A400159B4C /* YTSlideImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTSlideImageView.h; sourceTree = "<group>"; };
 		82C5E2D51D0654A400159B4C /* YTSlideImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTSlideImageView.m; sourceTree = "<group>"; };
+		82C5E2D71D065DDE00159B4C /* chat_bar_more_highlight@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bar_more_highlight@3x.png"; sourceTree = "<group>"; };
+		82C5E2D91D065DE500159B4C /* chat_bar_more_normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat_bar_more_normal@3x.png"; sourceTree = "<group>"; };
+		82C5E2DE1D065E8300159B4C /* YTMoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTMoreView.h; sourceTree = "<group>"; };
+		82C5E2DF1D065E8300159B4C /* YTMoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTMoreView.m; sourceTree = "<group>"; };
+		82C5E2E11D06709300159B4C /* YTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTCollectionView.h; sourceTree = "<group>"; };
+		82C5E2E21D06709300159B4C /* YTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTCollectionView.m; sourceTree = "<group>"; };
+		82C5E2E41D06713800159B4C /* YTCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTCollectionCell.h; sourceTree = "<group>"; };
+		82C5E2E51D06713800159B4C /* YTCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTCollectionCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +196,9 @@
 				82C5E22E1D0577BB00159B4C /* ViewController.m */,
 				82C5E23E1D05783800159B4C /* YTChatBar.h */,
 				82C5E23F1D05783800159B4C /* YTChatBar.m */,
+				82C5E2DD1D065E6C00159B4C /* 更多 */,
+				82C5E2DC1D065E4200159B4C /* 表情 */,
+				82C5E2DB1D065E3400159B4C /* 图片 */,
 				82C5E2301D0577BB00159B4C /* Main.storyboard */,
 				82C5E2331D0577BB00159B4C /* Assets.xcassets */,
 				82C5E2351D0577BB00159B4C /* LaunchScreen.storyboard */,
@@ -195,6 +211,8 @@
 		82C5E2271D0577BB00159B4C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				82C5E2D91D065DE500159B4C /* chat_bar_more_normal@3x.png */,
+				82C5E2D71D065DDE00159B4C /* chat_bar_more_highlight@3x.png */,
 				82C5E2731D05789C00159B4C /* emNot@2x.png */,
 				82C5E2741D05789C00159B4C /* emNot@3x.png */,
 				82C5E2751D05789C00159B4C /* emo@2x.png */,
@@ -207,10 +225,6 @@
 				82C5E28C1D0578F000159B4C /* Masonry */,
 				82C5E2851D0578DA00159B4C /* class */,
 				82C5E2531D05785400159B4C /* TZImagePickerController */,
-				82C5E2BD1D057AF900159B4C /* YTImageManager.h */,
-				82C5E2BE1D057AF900159B4C /* YTImageManager.m */,
-				82C5E2D41D0654A400159B4C /* YTSlideImageView.h */,
-				82C5E2D51D0654A400159B4C /* YTSlideImageView.m */,
 				82C5E2281D0577BB00159B4C /* main.m */,
 			);
 			name = "Supporting Files";
@@ -219,15 +233,6 @@
 		82C5E2531D05785400159B4C /* TZImagePickerController */ = {
 			isa = PBXGroup;
 			children = (
-				82C5E2C61D06538B00159B4C /* facem.plist */,
-				82C5E2C71D06538B00159B4C /* SwipeView.h */,
-				82C5E2C81D06538B00159B4C /* SwipeView.m */,
-				82C5E2C91D06538B00159B4C /* XMChatFaceView.h */,
-				82C5E2CA1D06538B00159B4C /* XMChatFaceView.m */,
-				82C5E2CB1D06538B00159B4C /* XMNFacePageView.h */,
-				82C5E2CC1D06538B00159B4C /* XMNFacePageView.m */,
-				82C5E2CD1D06538B00159B4C /* XMFaceManager.h */,
-				82C5E2CE1D06538B00159B4C /* XMFaceManager.m */,
 				82C5E2541D05785400159B4C /* TZAssetCell.h */,
 				82C5E2551D05785400159B4C /* TZAssetCell.m */,
 				82C5E2561D05785400159B4C /* TZAssetModel.h */,
@@ -299,6 +304,46 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		82C5E2DB1D065E3400159B4C /* 图片 */ = {
+			isa = PBXGroup;
+			children = (
+				82C5E2BD1D057AF900159B4C /* YTImageManager.h */,
+				82C5E2BE1D057AF900159B4C /* YTImageManager.m */,
+				82C5E2D41D0654A400159B4C /* YTSlideImageView.h */,
+				82C5E2D51D0654A400159B4C /* YTSlideImageView.m */,
+			);
+			name = "图片";
+			sourceTree = "<group>";
+		};
+		82C5E2DC1D065E4200159B4C /* 表情 */ = {
+			isa = PBXGroup;
+			children = (
+				82C5E2C61D06538B00159B4C /* facem.plist */,
+				82C5E2C71D06538B00159B4C /* SwipeView.h */,
+				82C5E2C81D06538B00159B4C /* SwipeView.m */,
+				82C5E2C91D06538B00159B4C /* XMChatFaceView.h */,
+				82C5E2CA1D06538B00159B4C /* XMChatFaceView.m */,
+				82C5E2CB1D06538B00159B4C /* XMNFacePageView.h */,
+				82C5E2CC1D06538B00159B4C /* XMNFacePageView.m */,
+				82C5E2CD1D06538B00159B4C /* XMFaceManager.h */,
+				82C5E2CE1D06538B00159B4C /* XMFaceManager.m */,
+			);
+			name = "表情";
+			sourceTree = "<group>";
+		};
+		82C5E2DD1D065E6C00159B4C /* 更多 */ = {
+			isa = PBXGroup;
+			children = (
+				82C5E2DE1D065E8300159B4C /* YTMoreView.h */,
+				82C5E2DF1D065E8300159B4C /* YTMoreView.m */,
+				82C5E2E11D06709300159B4C /* YTCollectionView.h */,
+				82C5E2E21D06709300159B4C /* YTCollectionView.m */,
+				82C5E2E41D06713800159B4C /* YTCollectionCell.h */,
+				82C5E2E51D06713800159B4C /* YTCollectionCell.m */,
+			);
+			name = "更多";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -358,6 +403,7 @@
 			files = (
 				82C5E2841D05789C00159B4C /* picS@3x.png in Resources */,
 				82C5E27E1D05789C00159B4C /* emo@2x.png in Resources */,
+				82C5E2DA1D065DE500159B4C /* chat_bar_more_normal@3x.png in Resources */,
 				82C5E27C1D05789C00159B4C /* emNot@2x.png in Resources */,
 				82C5E2821D05789C00159B4C /* picS.png in Resources */,
 				82C5E2371D0577BB00159B4C /* LaunchScreen.storyboard in Resources */,
@@ -365,6 +411,7 @@
 				82C5E2CF1D06538B00159B4C /* facem.plist in Resources */,
 				82C5E26A1D05785400159B4C /* TZImagePickerController.bundle in Resources */,
 				82C5E2A91D0578F000159B4C /* Info.plist in Resources */,
+				82C5E2D81D065DDE00159B4C /* chat_bar_more_highlight@3x.png in Resources */,
 				82C5E27D1D05789C00159B4C /* emNot@3x.png in Resources */,
 				82C5E2811D05789C00159B4C /* picN@3x.png in Resources */,
 				82C5E2831D05789C00159B4C /* picS@2x.png in Resources */,
@@ -383,6 +430,7 @@
 			files = (
 				82C5E2B01D0578F000159B4C /* NSArray+MASAdditions.m in Sources */,
 				82C5E26C1D05785400159B4C /* TZPhotoPickerController.m in Sources */,
+				82C5E2E31D06709300159B4C /* YTCollectionView.m in Sources */,
 				82C5E2681D05785400159B4C /* TZAssetModel.m in Sources */,
 				82C5E2B11D0578F000159B4C /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				82C5E2BA1D05792900159B4C /* MBProgressHUD.m in Sources */,
@@ -410,9 +458,11 @@
 				82C5E22F1D0577BB00159B4C /* ViewController.m in Sources */,
 				82C5E2B71D05791B00159B4C /* MBProgressHUD+YTShowMessage.m in Sources */,
 				82C5E22C1D0577BB00159B4C /* AppDelegate.m in Sources */,
+				82C5E2E61D06713800159B4C /* YTCollectionCell.m in Sources */,
 				82C5E2291D0577BB00159B4C /* main.m in Sources */,
 				82C5E2AE1D0578F000159B4C /* MASViewAttribute.m in Sources */,
 				82C5E2D11D06538B00159B4C /* XMChatFaceView.m in Sources */,
+				82C5E2E01D065E8300159B4C /* YTMoreView.m in Sources */,
 				82C5E2D61D0654A400159B4C /* YTSlideImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,11 +10,10 @@
 #import "HPGrowingTextView.h"
 
 typedef NS_ENUM(NSUInteger, XMFunctionViewShowType){
-    XMFunctionViewShowNothing /**< 不显示functionView */,
+   
     XMFunctionViewShowFace /**< 显示表情View */,
-    
     XMFunctionViewShowImage /**< 显示录音view */,
-    //    XMFunctionViewShowMore /**< 显示更多view */,
+    XMFunctionViewShowMore /**< 显示更多view */,
     XMFunctionViewShowKeyboard /**< 显示键盘 */,
 };
 

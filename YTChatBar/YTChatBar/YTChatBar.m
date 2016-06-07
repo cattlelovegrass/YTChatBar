@@ -10,6 +10,7 @@
 #import "Masonry/Masonry.h"
 #import "XMChatFaceView.h"
 #import "YTSlideImageView.h"
+#import "YTMoreView.h"
 
 #define kMaxHeight 60.0f
 #define kMinHeight 45.0f
@@ -20,6 +21,9 @@
 
 @property (nonatomic, strong) UIButton *emticonButton;
 @property (nonatomic, strong) UIButton *imageButton;
+@property (nonatomic, strong) UIButton *moreButton;
+@property (nonatomic, strong) YTMoreView *addMoreView;
+
 @property (strong, nonatomic) XMChatFaceView *faceView;
 @property (assign, nonatomic, readonly) CGFloat bottomHeight;
 @property (assign, nonatomic) CGRect keyboardFrame;
@@ -36,6 +40,14 @@
         _moreView.backgroundColor = self.backgroundColor;
     }
     return _moreView;
+}
+
+- (YTMoreView *)addMoreView {
+    if(!_addMoreView) {
+        _addMoreView = [[YTMoreView alloc]initWithFrame:CGRectMake(0, self.superViewHeight, self.frame.size.width, kFunctionViewHeight)];
+        _addMoreView.backgroundColor = self.backgroundColor;
+    }
+    return _addMoreView;
 }
 
 - (XMChatFaceView *)faceView{
@@ -94,6 +106,18 @@
         make.height.equalTo(@(32));
     }];
     
+    self.moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.moreButton.tag = XMFunctionViewShowMore;
+    [self.moreButton setImage:[UIImage imageNamed:@"chat_bar_more_highlight@3x.png"] forState:UIControlStateNormal];
+    [self.moreButton addTarget:self action:@selector(buttonAction:) forControlEvents:UIControlEventTouchUpInside];
+    [self addSubview:self.moreButton];
+    [self.moreButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.mas_bottom).offset(-39);
+        make.left.equalTo(self.emticonButton.mas_right).offset(12);
+        make.width.equalTo(@(32));
+        make.height.equalTo(@(32));
+    }];
+    
     self.textView = [[HPGrowingTextView alloc] init];
     self.textView.isScrollable = YES;
     self.textView.contentInset = UIEdgeInsetsMake(0, 5, 0, 5);
@@ -121,9 +145,15 @@
     if(button == self.emticonButton) {
         [self.emticonButton setSelected:!self.emticonButton.selected];
         [self.imageButton setSelected:NO];
+        [self.moreButton setSelected:NO];
     }else if(button == self.imageButton) {
         [self.imageButton setSelected:!self.imageButton.selected];
         [self.emticonButton setSelected:NO];
+        [self.moreButton setSelected:NO];
+    }else if(button == self.moreButton) {
+        [self.moreButton setSelected:!self.moreButton.selected];
+        [self.emticonButton setSelected:NO];
+        [self.imageButton setSelected:NO];
     }
     
     if(!button.selected) {
@@ -138,7 +168,9 @@
 - (void)showViewWithType:(XMFunctionViewShowType)showType {
     [self showImage:showType == XMFunctionViewShowImage && self.imageButton.selected];
     [self showEmotionFace:showType == XMFunctionViewShowFace && self.emticonButton.selected];
-    NSLog(@"1-%d:2-%d",self.imageButton.selected?YES:NO,self.emticonButton.selected?YES:NO);
+    [self showMoreView:showType == XMFunctionViewShowMore && self.moreButton.selected];
+    
+//    NSLog(@"1-%d:2-%d",self.imageButton.selected?YES:NO,self.emticonButton.selected?YES:NO);
     
     switch (showType) {
             
@@ -162,6 +194,12 @@
             [self.textView becomeFirstResponder];
             [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
             break;
+        case XMFunctionViewShowMore:
+            [self setFrame:CGRectMake(0, self.superViewHeight - kFunctionViewHeight - self.textView.frame.size.height - 10, self.frame.size.width, self.textView.frame.size.height + 10) animated:NO];
+            [self growingTextViewDidChange:self.textView];
+            
+            break;
+            
         default:
             break;
     }
@@ -260,7 +298,6 @@
             return;
         }
         if (self.delegate && [self.delegate respondsToSelector:@selector(chatBar:sendMessage:)]) {
-            
             [self.delegate chatBar:self sendMessage:text];
         }
         self.textView.text = @"";
@@ -343,12 +380,7 @@
     _r.size.height -= diff;
     _r.origin.y += diff;
     self.textView.frame = self.r;
-    
-//    CGRect r = self.textView.frame;
-//    r.size.height -= diff;
-//    r.origin.y += diff;
-//    self.textView.frame = r;
-    
+
 }
 
 - (void)setFrame:(CGRect)frame animated:(BOOL)animated{
@@ -373,6 +405,32 @@
     if (self.delegate && [self.delegate respondsToSelector:@selector(chatBar:sendPictures:)]) {
         [self.delegate chatBar:self sendPictures:@[image]];
     }
+}
+
+- (void)showMoreView:(BOOL)isShow {
+    
+    if(isShow) {
+        NSLog(@"表情显示");
+        
+        [self.moreButton setImage:[UIImage imageNamed:@"chat_bar_more_normal@3x.png"] forState:UIControlStateNormal];
+        [self.superview addSubview:self.addMoreView];
+        [UIView animateWithDuration:.3 animations:^{
+            [self.addMoreView setFrame:CGRectMake(0, self.superViewHeight - kFunctionViewHeight, self.frame.size.width, kFunctionViewHeight)];
+        } completion:nil];
+        
+    }else {
+        NSLog(@"表情不显示");
+        
+        [self.moreButton setImage:[UIImage imageNamed:@"chat_bar_more_highlight@3x.png"] forState:UIControlStateNormal];
+        [UIView animateWithDuration:0.01 animations:^{
+            [self.addMoreView setFrame:CGRectMake(0, self.superViewHeight, self.frame.size.width, kFunctionViewHeight)];
+            //            self.faceView.backgroundColor = [UIColor redColor];
+        } completion:^(BOOL finished) {
+            [self.addMoreView removeFromSuperview];
+        }];
+        
+    }
+
 }
 
 - (void)showEmotionFace:(BOOL)isShow {
