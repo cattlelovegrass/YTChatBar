@@ -41,9 +41,6 @@
     NSString *name = _itemArray[indexPath.row];
     cell.imageButton.image = [UIImage imageNamed:name];
     
-//    [cell.imageButton setImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
-    
-    
     if(!cell) {
         NSLog(@"无法创建collection错误");
     }
