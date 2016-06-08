@@ -10,4 +10,9 @@
 
 @interface YTCollectionCell : UICollectionViewCell
 
+@property (nonatomic, strong) UIImageView *imageButton;
+
+
+//- (void)configWithMode
+
 @end

@@ -38,6 +38,12 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     YTCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    NSString *name = _itemArray[indexPath.row];
+    cell.imageButton.image = [UIImage imageNamed:name];
+    
+//    [cell.imageButton setImage:[UIImage imageNamed:name] forState:UIControlStateNormal];
+    
+    
     if(!cell) {
         NSLog(@"无法创建collection错误");
     }
@@ -52,12 +58,14 @@
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake((self.frame.size.width-2)/4,self.frame.size.height-10);
+    return CGSizeMake((self.frame.size.width-3)/4,self.frame.size.height/2+5);
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *name = _itemArray[indexPath.row];
+    
     if(self.collectViewCellSelectHandel) {
-        self.collectViewCellSelectHandel(indexPath,@"string");
+        self.collectViewCellSelectHandel(indexPath,name);
     }
 }
 
