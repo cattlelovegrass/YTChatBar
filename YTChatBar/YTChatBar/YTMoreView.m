@@ -33,12 +33,9 @@
     self.scrollView = [[UIScrollView alloc]init];
     self.scrollView.delegate = self;
     self.scrollView.contentSize = CGSizeMake(self.frame.size.width*2, 168);
-//    self.scrollView.sho
-    
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled = YES;
-//    self.scrollView.scrollEnabled = YES;
     [self addSubview:self.scrollView];
     [self.scrollView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.mas_top).offset(0);
@@ -79,11 +76,7 @@
     collectionView.collectViewCellSelectHandel = ^(NSIndexPath *indexPath,id model)  {
         NSLog(@"看看:%@",model);
     };
-    
-//    NSLog(@"子视图:%@",self.scrollView.subviews);
-    
-    
-    
+
 }
 
 
